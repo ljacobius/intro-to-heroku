@@ -13,7 +13,7 @@ export class WelcomePage {
         this.nav = nav;
     }
 
-    testclick() {
+    download() {
         alert("Hello! I am an alert box!!");
     }
 
