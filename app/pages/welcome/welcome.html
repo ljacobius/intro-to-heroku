@@ -29,11 +29,16 @@
                 <ion-label>Product</ion-label>
                 <ion-input placeholder="Enter Input"></ion-input>
             </ion-item> -->
-            <!-- <ion-item>
-                <ion-button color="medium">
+            <ion-item>
+                <!-- <ion-button color="medium">
                     Download
-                </ion-button> 
-            </ion-item>        -->
+                </ion-button>  -->
+                <ion-buttons end>
+                    <button ion-button icon-only (click) ="testclick()"  >
+                     <ion-icon name="download"></ion-icon>
+                   </button>
+                </ion-buttons>
+            </ion-item>       
         </ion-card-content>
     </ion-card>
 
@@ -55,3 +60,8 @@
     <!-- </ion-slides> -->
 
 </ion-content>
+<script>
+    function testclick() {
+        alert("Hello! I am an alert box!!");
+    }
+</script>
