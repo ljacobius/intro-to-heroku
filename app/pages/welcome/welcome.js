@@ -4,6 +4,9 @@ import {Page, NavController, NavParams} from 'ionic-angular';
     templateUrl: 'build/pages/welcome/welcome.html'
 })
 export class WelcomePage {
+    name: string = "";
+    email: string = "";
+
 
     static get parameters() {
         return [[NavController], [NavParams]];
@@ -14,7 +17,8 @@ export class WelcomePage {
     }
 
     download() {
-        alert("Hello! I am an alert box!!");
+        console.log('this.name',this.name)
+        console.log('this.email',this.email)
     }
 
 }
