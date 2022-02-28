@@ -17,8 +17,8 @@ export class WelcomePage {
     }
 
     download() {
-        console.log('this.name'+this.name);
-        console.log('this.email'+this.email);
+        // console.log('this.name'+this.name);
+        // console.log('this.email'+this.email);
     }
 
 }
