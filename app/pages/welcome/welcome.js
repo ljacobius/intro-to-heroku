@@ -24,6 +24,11 @@ export class WelcomePage {
     }
 
     download() {
+        var link = document.createElement("a");
+        link.download = "info.txt";
+        var data = "text/json;charset=utf-8," + encodeURIComponent('test');
+        link.href = "data:" + data;
+        link.click();
         // console.log('this.userFullName',this.userFullName);
     }
 
