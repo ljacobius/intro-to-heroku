@@ -20,7 +20,7 @@
             </ion-item>
             <ion-item>
                 <ion-label>Email</ion-label>
-                <ion-input (keyup) = "keyUpEmail(i)" id="email" placeholder="johnny@ownbackup.com"></ion-input>
+                <ion-input (keyup) = "keyUpEmail($event.target.value)" id="email" placeholder="johnny@ownbackup.com"></ion-input>
             </ion-item>
             <!-- <ion-item>
                 <ion-label>Department</ion-label>
