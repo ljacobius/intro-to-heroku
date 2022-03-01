@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {Page, NavController, NavParams} from 'ionic-angular';
-import installFile from '../../services/install.sh';
 @Page({
     templateUrl: 'build/pages/welcome/welcome.html'
 })
@@ -19,11 +18,10 @@ export class WelcomePage {
         return [[NavController], [NavParams]];
     }
 
-    constructor(nav, navParams, installFile) {
+    constructor(nav, navParams) {
         this.nav = nav;
         this.userFullName = '';
         this.userEmail=''
-        this.installFileString = JSON.stringify(installFile)
     }
 
     keyUpName(i) {
@@ -35,19 +33,21 @@ export class WelcomePage {
     }
 
     download() {
-        var link = document.createElement("a");
-        link.download = "userDetails.json";
-        var details = {fullName: this.userFullName, email: this.userEmail}
-        var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(details));
-        link.href = "data:" + data;
-        link.click();
-
-        var installer = document.createElement("a");
-        installer.download = "install.sh";
-        var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(this.installFileString));
-        installer.href = "data:" + data;
+        // var link = document.createElement("a");
+        // link.download = "userDetails.json";
+        // var details = {fullName: this.userFullName, email: this.userEmail}
+        // var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(details));
+        // link.href = "data:" + data;
+        // link.click();
+        var installer = document.createElement('a');
+        installer.setAttribute('type', 'hidden');
+        installer.href = '../../services/install.sh';
+        installer.download = path;
+        document.body.appendChild(installer);
         installer.click();
-        // console.log('this.userFullName',this.userFullName);
+        installer.remove();
+
+
     }
 
 }
