@@ -33,19 +33,19 @@ export class WelcomePage {
     }
 
     download() {
-        // var link = document.createElement("a");
-        // link.download = "userDetails.json";
-        // var details = {fullName: this.userFullName, email: this.userEmail}
-        // var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(details));
-        // link.href = "data:" + data;
-        // link.click();
-        var installer = document.createElement('a');
-        installer.setAttribute('type', 'hidden');
-        installer.href = '../../services/install.sh';
-        installer.download = path;
-        document.body.appendChild(installer);
-        installer.click();
-        installer.remove();
+        var link = document.createElement("a");
+        link.download = "userDetails.json";
+        var details = {fullName: this.userFullName, email: this.userEmail}
+        var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(details));
+        link.href = "data:" + data;
+        link.click();
+        // var installer = document.createElement('a');
+        // installer.setAttribute('type', 'hidden');
+        // installer.href = '../../services/install.sh';
+        // installer.download = path;
+        // document.body.appendChild(installer);
+        // installer.click();
+        // installer.remove();
 
 
     }
