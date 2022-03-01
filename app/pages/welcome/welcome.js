@@ -9,8 +9,8 @@ import {Page, NavController, NavParams} from 'ionic-angular';
 //     templateUrl: 'build/pages/welcome/welcome.html'
 // })
 export class WelcomePage {
-    userFullName: string = "";
-    userEmail: string = "";
+    // userFullName: string = "";
+    // userEmail: string = "";
 
 
 
@@ -24,7 +24,7 @@ export class WelcomePage {
     }
 
     download() {
-        console.log('this.userFullName',this.userFullName);
+        // console.log('this.userFullName',this.userFullName);
     }
 
 }
