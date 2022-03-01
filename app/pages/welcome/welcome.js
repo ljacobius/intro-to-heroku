@@ -19,8 +19,8 @@ export class WelcomePage {
         this.nav = nav;
     }
 
-    download(form) {
-        console.log('this.name',form.value);
+    download() {
+        console.log('this.userDetails',this.userDetails);
     }
 
 }

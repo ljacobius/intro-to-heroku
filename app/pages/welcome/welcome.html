@@ -12,15 +12,15 @@
             <!-- <ion-card-subtitle>Tell us about yourself</ion-card-subtitle> -->
         </ion-card-header>
         
-        <!-- <ion-card-content> -->
-        <form #form="ngForm" (ngDownload)="download(form)" novalidate>
+        <ion-card-content>
+        <!-- <form #form="ngForm" (ngDownload)="download(form)" novalidate> -->
             <ion-item>
                 <ion-label>Full Name</ion-label>
-                <ion-input type="text" [(ngModel)]="userDetails.name" ngControl="name" placeholder="Johnny Doe"></ion-input>
+                <ion-input type="text" [(ngModel)]="userDetails.name" placeholder="Johnny Doe"></ion-input>
             </ion-item>
             <ion-item>
                 <ion-label>Email</ion-label>
-                <ion-input type="text" [(ngModel)]="userDetails.email" ngControl="email" placeholder="johnny@ownbackup.com"></ion-input>
+                <ion-input type="text" [(ngModel)]="userDetails.email" placeholder="johnny@ownbackup.com"></ion-input>
             </ion-item>
             <!-- <ion-item>
                 <ion-label>Department</ion-label>
@@ -41,8 +41,8 @@
                    </button>
                 </ion-buttons>
             </ion-item>   
-        </form>    
-        <!-- </ion-card-content> -->
+        <!-- </form>     -->
+        </ion-card-content>
     </ion-card>
 
     <!-- <ion-slides pager loop="false" autoplay="false" index="1"> -->
