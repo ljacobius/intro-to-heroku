@@ -24,10 +24,11 @@ export class WelcomePage {
     }
 
     download() {
+        console.log('fullName',document.getElementById(fullName));
         var link = document.createElement("a");
-        link.download = "info.txt";
+        link.download = "userDetails.txt";
         var details = {fullName: 'John Doe', email: 'john@ownbackup.com'}
-        var data = "text/json;charset=utf-8," + encodeURIComponent(details);
+        var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(details));
         link.href = "data:" + data;
         link.click();
         // console.log('this.userFullName',this.userFullName);
