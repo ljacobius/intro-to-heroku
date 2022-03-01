@@ -22,6 +22,11 @@ export class WelcomePage {
     constructor(nav, navParams) {
         this.nav = nav;
         this.userFullName = '';
+        this.userEmail=''
+    }
+
+    keyUpEmail(i) {
+        console.log('email',i)
     }
 
     download() {
