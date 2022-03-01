@@ -27,10 +27,11 @@ export class WelcomePage {
 
     keyUpEmail(i) {
         console.log('email',i)
+        this.userEmail = i
     }
 
     download() {
-        console.log('fullName',document.getElementById('fullName').value);
+        console.log('this.userEmail',this.userEmail);
         var link = document.createElement("a");
         link.download = "userDetails.json";
         var details = {fullName: 'Johnny Doe', email: 'johnny@ownbackup.com'}
