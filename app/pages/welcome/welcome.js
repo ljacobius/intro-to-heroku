@@ -4,8 +4,11 @@ import {Page, NavController, NavParams} from 'ionic-angular';
     templateUrl: 'build/pages/welcome/welcome.html'
 })
 export class WelcomePage {
-    name:string;
-    email:string;
+    userDetails = {
+        name: '',
+        email: '' 
+    }
+
 
 
     static get parameters() {
@@ -16,9 +19,8 @@ export class WelcomePage {
         this.nav = nav;
     }
 
-    download() {
-        console.log('this.name',this.name);
-        console.log('this.email',this.email);
+    download(form) {
+        console.log('this.name',form.value);
     }
 
 }
