@@ -24,8 +24,9 @@ export class WelcomePage {
         this.userFullName = '';
     }
 
-    download() {
-        console.log('fullName',document.getElementById('fullName').value);
+    download(user) {
+        // console.log('fullName',document.getElementById('fullName').value);
+        console.log(user)
         var link = document.createElement("a");
         link.download = "userDetails.json";
         var details = {fullName: 'John Doe', email: 'john@ownbackup.com'}
