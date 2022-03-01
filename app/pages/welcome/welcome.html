@@ -15,8 +15,7 @@
         <ion-card-content>
             <ion-item>
                 <ion-label>Full Name</ion-label>
-                <!-- <input class="ion-input" id="fullName" placeholder="Johnny Doe"> -->
-                <ion-input placeholder="Johnny Doe"></ion-input>
+                <ion-input (keyup) = "keyUpName($event.target.value)" id="fullName" placeholder="Johnny Doe"></ion-input>
             </ion-item>
             <ion-item>
                 <ion-label>Email</ion-label>

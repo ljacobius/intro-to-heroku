@@ -25,16 +25,18 @@ export class WelcomePage {
         this.userEmail=''
     }
 
+    keyUpName(i) {
+        this.userFullName = i
+    }
+
     keyUpEmail(i) {
-        console.log('email',i)
         this.userEmail = i
     }
 
     download() {
-        console.log('this.userEmail',this.userEmail);
         var link = document.createElement("a");
         link.download = "userDetails.json";
-        var details = {fullName: 'Johnny Doe', email: 'johnny@ownbackup.com'}
+        var details = {fullName: this.userFullName, email: this.userEmail}
         var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(details));
         link.href = "data:" + data;
         link.click();
