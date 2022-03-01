@@ -24,9 +24,9 @@ export class WelcomePage {
     }
 
     download() {
-        console.log('fullName',document.getElementById(fullName));
+        console.log('fullName',document.getElementById('fullName'));
         var link = document.createElement("a");
-        link.download = "userDetails.txt";
+        link.download = "userDetails.json";
         var details = {fullName: 'John Doe', email: 'john@ownbackup.com'}
         var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(details));
         link.href = "data:" + data;
