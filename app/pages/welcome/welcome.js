@@ -21,6 +21,7 @@ export class WelcomePage {
 
     constructor(nav, navParams) {
         this.nav = nav;
+        this.userFullName = '';
     }
 
     download() {
