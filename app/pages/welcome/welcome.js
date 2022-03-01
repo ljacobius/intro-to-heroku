@@ -1,13 +1,13 @@
 import {Component} from '@angular/core';
 import {Page, NavController, NavParams} from 'ionic-angular';
 
-// @Page({
-//     templateUrl: 'build/pages/welcome/welcome.html'
-// })
-@Component({
-    selector:'welcome-page'
+@Page({
     templateUrl: 'build/pages/welcome/welcome.html'
 })
+// @Component({
+//     selector:'welcome-page'
+//     templateUrl: 'build/pages/welcome/welcome.html'
+// })
 export class WelcomePage {
     userFullName: string = "";
     userEmail: string = "";
